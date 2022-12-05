@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background: linear-gradient(to right, #f3c06e, #f37979);
+}
+.wrap{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    border: 1px dashed black;
+    width: 10em;
+    height: 59vh;
+    font-size: 2rem;
+    padding: 35px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input{
+    width: 80%;
+    padding-left: 10px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 1px slategray;
+    border-radius: 15px;
+}
+
+.submit{
+    background-color: rgb(66, 81, 223);
+    margin-left: 20%;
+    
+    color: aliceblue;
+    width: 40%;
+    font-size: 1.20rem;
+    border-radius: 15px;
+
+}
+
+.submit:hover{
+    background-color: cadetblue;
+    zoom: 101%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.signin{
+    background-color: aqua;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+p{
+    margin-top: 20px;
+    padding-left: 5px;
+    
+}
+.error{
+    margin: 10px;
+    color: red;
+    display: none;
+}
