@@ -1,0 +1,21 @@
+
+body{
+    background: linear-gradient(to right,cyan,white);
+    height: 100vh;
+    color: rgb(20, 17, 13);
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(55, 55, 209);
+    
+}
+a:hover{
+    background: 1px transparent black;
+    color: black;
+}

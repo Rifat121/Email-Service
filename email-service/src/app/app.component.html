@@ -1,0 +1,27 @@
+
+  <!-- <img src="../../email_service_bg.png" class="bg_pic">
+  <h1>Welcome to this trial Email Service</h1> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">EService</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav">
+        <a class="nav-link" routerLink="/signup" *ngIf="!_signup.loggedIn()">Sign Up</a>
+        <a class="nav-link" routerLink="/login" *ngIf="!_signup.loggedIn()">Sign In</a><br><br>
+        <a class="nav-link" style="cursor: pointer;" routerLink="/login" *ngIf="_signup.loggedIn()" (click)="_signup.logout()">Log Out</a><br><br>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

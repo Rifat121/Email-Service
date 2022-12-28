@@ -1,0 +1,9 @@
+input{
+    width: 59%;
+}
+
+body{
+    background: linear-gradient(to right,cyan,white);
+    height: 100vh;
+    color: rgb(20, 17, 13);
+}
