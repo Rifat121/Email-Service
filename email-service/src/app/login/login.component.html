@@ -1,0 +1,49 @@
+
+    <div class="container">
+      <div class="py-5">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <span class="anchor" id="formLogin"></span>
+    
+            <div class="card rounded-0">
+              <div class="card-header">
+                <h3 class="mb-0">Sign In</h3>
+              </div>
+              <div class="alert alert-danger" *ngIf="errorMsg">
+                {{errorMsg}}
+              </div>
+              <div class="card-body">
+
+                <form #userForm="ngForm" (ngSubmit)="Login()" novalidate>
+                <div class="alert alert-danger" *ngIf="errorMsg">
+                  {{errorMsg}}
+                </div>
+                  {{user | json}}
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" #email="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z]+.[a-z.]+" [class.is-invalid]="email.invalid && email.touched" [class.is-valid]="email.valid" class="form-control" [(ngModel)]="user.email">
+                    <div *ngIf="email.invalid && email.touched">
+                      <small *ngIf="email.errors?.['required']" class="text-danger">Email is required</small>
+                      <small class="text-danger" *ngIf="email.errors?.['pattern']" [class.d-none]="email.valid || email.untouched">Provided Email is not Valid</small>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" [class.is-invalid]="password.touched && password.invalid" #password="ngModel" required minlength="8" type="password"  class="form-control" [(ngModel)]="user.password">
+                    
+                    <div *ngIf="password.errors && (password.touched && password.invalid)">
+                      <small *ngIf="password.errors?.['required']" class="text-danger">Password is required</small>
+                      <small *ngIf="password.errors?.['minlength']" class="text-danger">Password must be at least 8 digits</small>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" [disabled]="userForm.form.invalid" type="submit">Sign In</button>
+                </form>
+                <div class="login">
+                  <small>Not registered yet??</small> <a routerLink="/signup"> Sign Up</a>
+                </div>
+              </div>
+              </div>
+              </div>
+        </div>
+      </div>
+    </div>
