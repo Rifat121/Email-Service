@@ -3,7 +3,9 @@ const router = express.Router()
 const User = require('../model/user.js')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
-const db = "mongodb+srv://rifat121:AEvHz0Do1GSc0Nx3@emailservice.wmzlyqr.mongodb.net/test"
+ require('dotenv').config();
+
+const db = process.env.DB
 
 mongoose.connect(db,err=>{
     if(err){
@@ -115,5 +117,5 @@ router.get('/dashboard', verifyToken, (req,res)=>{
     ]
     res.json(emails)
 })
-// mongodb+srv://rifat121:<AEvHz0Do1GSc0Nx3>@emailservice.wmzlyqr.mongodb.net/test
+// 
 module.exports = router

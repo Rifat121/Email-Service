@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const api = require('./routes/api')
 
@@ -27,4 +27,3 @@ app.post('/login',function(req,res){
 app.listen(PORT, function(){
     console.log("Server running on localhost: "+ PORT);
 });
-// rifat121,AEvHz0Do1GSc0Nx3
