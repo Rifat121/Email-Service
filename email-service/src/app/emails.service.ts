@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailsService {
 
-  private url = "api/dashboard";
+  private url = "/api/dashboard";
 
 
   constructor(private _http : HttpClient) { }
